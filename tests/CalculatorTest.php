@@ -15,4 +15,20 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         /* Assert */
         $this->assertEquals(10, $sum);
     }
+    
+    
+    public function testDivisionByZeroDoesNotCompute ()
+    {
+        /*Arrange*/
+        
+        $calculator = new Calculator;
+        
+        /*Assert*/
+        $this->expectException(\InvalidArgumentException::class);
+        
+        /*Act*/
+        $sum = $calculator->division(3, 0);
+        
+        
+    }
 }

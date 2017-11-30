@@ -2,14 +2,29 @@
 
 class Calculator
 {
-    public function addition(array $values)
+    
+    private $sum = 0; 
+    
+    public function getSum()
     {
-        $sum = 0;
-        
+        return $this->sum;
+    }
+    
+    public function addition(array $values)
+    {        
         foreach ($values as $value) {
-            $sum += $value;
+            $this->sum += $value;
         }
         
-        return $sum;
+        return $this->sum;
     }
+    
+    public function division($value1, $value2) 
+    {
+        if($value2 ==0){
+            throw new \InvalidArgumentException;    
+        }
+        return $value1 / $value2;
+    }
+
 }
