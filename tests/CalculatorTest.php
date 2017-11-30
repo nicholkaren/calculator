@@ -9,10 +9,10 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         
         
         /* Act */
-        $sum = $calculator->addition(2, 3);
+        $sum = $calculator->addition([2, 3, 5]);
         
         
         /* Assert */
-        $this->assertEquals(5, $sum);
+        $this->assertEquals(10, $sum);
     }
 }

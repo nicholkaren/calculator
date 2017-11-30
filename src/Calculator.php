@@ -2,8 +2,14 @@
 
 class Calculator
 {
-    public function addition($value1, $value2)
+    public function addition(array $values)
     {
-        return $value1 + $value2;
+        $sum = 0;
+        
+        foreach ($values as $value) {
+            $sum += $value;
+        }
+        
+        return $sum;
     }
 }
