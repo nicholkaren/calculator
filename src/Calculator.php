@@ -19,12 +19,12 @@ class Calculator
         return $this->sum;
     }
     
-    public function division($value1, $value2) 
+    public function division($value) 
     {
-        if($value2 ==0){
+        if($value ==0){
             throw new \InvalidArgumentException;    
         }
-        return $value1 / $value2;
+        $this->sum = $this->sum / $value;
     }
 
 }
