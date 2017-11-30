@@ -1,3 +1,4 @@
-Test hejhej
+<?php
+	echo "Hello World";
 
-katerina was here
+?>
