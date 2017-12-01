@@ -81,18 +81,22 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(6, $calculator->getSum());
     }
 
-    /*
-    public function testPercentage()
+    public function testModulus()
     {
-       /*Arrange
+       /*Arrange*/
         $calculator = new Calculator;
         
-        /* Act 
-        $calculator->addition([5]);
+        /* Act */
+        $calculator->addition([-5]);
+        $calculator->modulus([3]);
 
-        $calculator->division([100]);
+        /* Assert*/
+        $this->assertEquals(-2, $calculator->getSum());
+    }
 
-        /* Assert
-        $this->assertEquals(0.05, $calculator->getSum());
-    }*/
 }
+
+
+
+
+
