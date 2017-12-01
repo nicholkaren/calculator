@@ -16,7 +16,6 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(10, $calculator->getSum());
     }
     
-    
     public function testDivisionByZeroDoesNotCompute ()
     {
         /*Arrange*/
@@ -35,7 +34,7 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
        /*Arrange*/
         $calculator = new Calculator;
         
-        /* Act */
+        /* Act */ /*addtion kan endast göras här för att vi VET att det testet är grönt */
         $calculator->addition([5]);
         $calculator->division(2);
         
@@ -54,5 +53,19 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         
         /* Assert */
         $this->assertEquals(6, $calculator->getSum());
+    }
+    public function testSimpleSubtraction()
+    {
+        /* Arrange */
+        $calculator = new Calculator;
+        
+        
+        /* Act */
+        $calculator->addition([10]);
+        $calculator->subtraction([5]);
+        
+        
+        /* Assert */
+        $this->assertEquals(5, $calculator->getSum());
     }
 }
