@@ -27,4 +27,15 @@ class Calculator
         $this->sum = $this->sum / $value;
     }
 
+
+    public function subtraction(array $values) 
+    {
+        
+        foreach ($values as $value) {
+            $this->sum -= $value;
+        }
+
+        return $this->sum;
+    }
+
 }

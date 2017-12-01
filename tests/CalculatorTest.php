@@ -6,16 +6,13 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
     {
         /* Arrange */
         $calculator = new Calculator;
-        
-        
+         
         /* Act */
         $calculator->addition([2, 3, 5]);
-        
         
         /* Assert */
         $this->assertEquals(10, $calculator->getSum());
     }
-    
     
     public function testDivisionByZeroDoesNotCompute ()
     {
@@ -27,9 +24,8 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         
         /*Act*/
         $calculator->division(0);
-        
-        
     }
+
     public function testDivision()
     {
        /*Arrange*/
@@ -41,7 +37,6 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         
         /* Assert */
         $this->assertEquals(2.5, $calculator->getSum());
-        
     }
     
     public function testMultipleOperationsWork(){
@@ -54,5 +49,19 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         
         /* Assert */
         $this->assertEquals(6, $calculator->getSum());
+    }
+
+
+    public function testSimpleSubtraction()
+    {
+        /* Arrange */
+        $calculator = new Calculator;
+         
+        /* Act */
+        $calculator->addition([10]);
+        $calculator->subtraction([5]);
+        
+        /* Assert */
+        $this->assertEquals(5, $calculator->getSum());
     }
 }
