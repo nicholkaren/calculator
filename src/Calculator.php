@@ -37,4 +37,25 @@ class Calculator
         return $this->sum;
     }
 
+    public function multiplication(array $values)
+    {
+        foreach ($values as $value)
+        {
+            $this->sum *=$value;
+        }
+        
+        return $this->sum;
+    }
+
+    /*
+    public function percentage($value) 
+    {
+
+        if($value <= 100)
+        { 
+            $this->sum = $this->sum / $value;
+        }
+    }
+    */
+
 }

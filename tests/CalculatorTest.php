@@ -46,11 +46,14 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         /* Act */
         $calculator->addition([10, 2]);
         $calculator->division(2);
+        $calculator->subtraction ([2]);
+        $calculator->multiplication ([2]);
+
         
         /* Assert */
-        $this->assertEquals(6, $calculator->getSum());
+        $this->assertEquals(8, $calculator->getSum());
     }
-    
+
 
     public function testSimpleSubtraction()
     {
@@ -65,4 +68,31 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(5, $calculator->getSum());
     }
 
+    public function testSimpleMultiplication()
+    {
+        /* Arrange */
+        $calculator = new Calculator;
+         
+        /* Act */
+        $calculator->addition([3]);
+        $calculator->multiplication([2]);
+        
+        /* Assert */
+        $this->assertEquals(6, $calculator->getSum());
+    }
+
+    /*
+    public function testPercentage()
+    {
+       /*Arrange
+        $calculator = new Calculator;
+        
+        /* Act 
+        $calculator->addition([5]);
+
+        $calculator->division([100]);
+
+        /* Assert
+        $this->assertEquals(0.05, $calculator->getSum());
+    }*/
 }
