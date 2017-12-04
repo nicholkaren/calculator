@@ -47,6 +47,9 @@
 						echo 'Numeric values are required';
 					
 					}
+                    echo'<pre>';
+                    var_dump($_POST);
+                    echo'</pre>';
 				}
 			
 			?>
