@@ -12,6 +12,9 @@ $c = new Calculator;
 $c->setOperation(new Adder);
 $c->calculate($num1, $num2);
 
+$c->setOperation(new Subtractor);
+$c->calculate($num1, $num2);
+
 echo $c->getResult();
 
 ?>
