@@ -57,4 +57,7 @@ class Calculator
         return $this->sum;
     }
 
-}
+
+
+    }
+?>
