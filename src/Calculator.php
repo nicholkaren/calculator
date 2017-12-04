@@ -8,7 +8,7 @@ class Calculator
     public function getSum()
     {
         return $this->sum;
-    }
+    } 
     
     public function addition(array $values)
     {        
