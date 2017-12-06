@@ -9,7 +9,8 @@
 // Går det inte så skriv om funktionerna som i exemplet. 
 
         
-// Deklarerar variabler. $_POST är en array. För att få ut siffran på t ex numOne -> $_POST['numOne']
+// Deklarerar variabler. $_POST är en array. 
+//För att få ut siffran på t ex numOne -> $_POST['numOne']
     $numOne = $_POST['numOne'];
     $numTwo = $_POST['numTwo'];
 
@@ -55,9 +56,9 @@
         } 
 
        
-// Alla våra functions börjar här
-class Calculator
-{
+    // Alla våra functions börjar här
+    class Calculator
+    {
 
     private $sum = 0; 
     
@@ -77,25 +78,12 @@ class Calculator
         return $this->sum;
     }
 
-
-    // OBS!!! Ny funktion som testar enbart 2 fält!!
-    //public function simpleAddition ($numOne, $numTwo)
-   // {
-   //     return $numOne + $numTwo;
-   // }
-    
     public function subtraction(array $values)
     {
-        // i arrayen values så finns 2 tal. [0] är första talet. [1] är andra talet.
+        // i arrayen values finns 2 tal. [0] är första talet. [1] är andra talet.
         $sum = $values[0];
 
         return $sum - $values[1];
-
-        //foreach ($values as $value)
-        //{
-          //  $this->sum -=$value;
-        //}
-        
     }
 
     public function multiplication(array $values)
@@ -104,13 +92,6 @@ class Calculator
         $sum = $values[0];
 
         return $sum * $values[1];
-
-       // foreach ($values as $value)
-       // {
-       //     $this->sum *=$value;
-       // }
-        
-       // return $this->sum;
     }
 
 
@@ -135,13 +116,15 @@ class Calculator
 
         return $sum % $values[1];
 
-       // foreach ($values as $value) 
-        //{
-         //   $this->sum %= $value;
-       // }
-        
-      //  return $this->sum;
     }
+
+
+    // OBS!!! Ny funktion som testar enbart 2 fält ist för array!!
+    //public function simpleAddition ($numOne, $numTwo)
+   // {
+   //     return $numOne + $numTwo;
+   // }
+    
 
 
 }
@@ -152,19 +135,20 @@ fall blir det samma fil. Metoden POST/post betyder att man skickar med values ti
 funktionen. De sparas i en variabel som heter $_POST som är en array. Den kan man 
 alltid var_dump($_POST) om man vill veta vad man har skickat med i formuläret. 
 
-name= key i arrayen. -->     
-<h1 class="rubrik" style=" font-family: 'Arial';">Vår lilla kalkylator</h1>
-<form name="Calculator" action="Calculator.php" method="POST">
-    <input type="text" name="numOne" value="<?php echo $numOne;?>">
-    <select name="operation">
-                    <option value="addition">Plus</option>
-                    <option value="subtraction">Minus</option>
-                    <option value="multiplication">Gånger</option>
-                    <option value="division">Delat med</option>
-                    <option value="modulus">Modulus</option>
-    </select>
-    <input type="text" name="numTwo" value="<?php echo $numTwo;?>">
-    <button type="submit" class=""> = </button> <?php echo $result; ?> <br>
-
-</form>
+name= key i arrayen. --> 
+<div class="container" style= "text-align: center; padding-top: 20%; padding-bottom: 25%; background-color: lightpink;">    
+    <h1 class="rubrik" style= "font-family: 'Arial'; color: white; text-transform: uppercase; letter-spacing: 2px;"> Lilla Kalkylatorn</h1>
+    <form name="Calculator" action="Calculator.php" method="POST">
+        <input type="text" name="numOne" value="<?php echo $numOne;?>">
+        <select name="operation">
+                        <option value="addition">Plus</option>
+                        <option value="subtraction">Minus</option>
+                        <option value="multiplication">Gånger</option>
+                        <option value="division">Delat med</option>
+                        <option value="modulus">Modulus</option>
+        </select>
+        <input type="text" name="numTwo" value="<?php echo $numTwo;?>">
+        <button type="submit" style= "color: red;"> = </button> <?php echo $result; ?> <br>
+    </form>
+</div>
 

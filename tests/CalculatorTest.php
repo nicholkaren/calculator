@@ -59,13 +59,14 @@ class CalculatorTest extends \PHPUnit\Framework\TestCase
     {
         /* Arrange */
         $calculator = new Calculator;
-         
+
         /* Act */
-        $calculator->addition([10]);
+        $calculator->subtraction([5]);
+
         $calculator->subtraction([5]);
         
         /* Assert */
-        $this->assertEquals(5, $calculator->getSum());
+        $this->assertEquals(0,$calculator->getSum());
     }
 
     public function testSimpleMultiplication()
