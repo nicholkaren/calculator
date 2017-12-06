@@ -60,7 +60,23 @@
             $result = $cal->sqroot($values);
         }
 
+        //($_POST = array($numOne, $numTwo)); 
+        //    if (in_array($_POST, ['clear']))
+        //    {
+        //    $numOne = NULL;
+         //   $numTwo = NULL;
+          //  }
+        
+        if(isset($_POST['clear'])){
+            $numOne = null;
+            $numTwo = null;
+            $result = null;
+
     }
+}
+
+
+
     // Alla våra functions börjar här
     class Calculator
     {
