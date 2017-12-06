@@ -28,6 +28,37 @@ class Calculator
    //     return $numOne + $numTwo;
    // }
     
+    public function subtraction(array $values)
+    {
+        // i arrayen values så finns 2 tal. [0] är första talet. [1] är andra talet.
+        $sum = $values[0];
+
+        return $sum - $values[1];
+
+        //foreach ($values as $value)
+        //{
+          //  $this->sum -=$value;
+        //}
+        
+    }
+
+
+    public function multiplication(array $values)
+    {
+
+        $sum = $values[0];
+
+        return $sum * $values[1];
+        
+       // foreach ($values as $value)
+       // {
+       //     $this->sum *=$value;
+       // }
+        
+       // return $this->sum;
+    }
+
+
     public function division($values) 
     {
         // i arrayen values så finns 2 tal. [0] är första talet. [1] är andra talet.
@@ -41,32 +72,6 @@ class Calculator
         //$this->sum = $this->sum / $value;
 
         // Kolla numOne/numTwo
-    }
-    
-
-    public function subtraction(array $values)
-    {
-        // i arrayen values så finns 2 tal. [0] är första talet. [1] är andra talet.
-        $sum = $values[0];
-
-        return $sum - $values[1];
-
-        //foreach ($values as $value)
-        //{
-          //  $this->sum -=$value;
-        //}
-        
-        return $this->sum;
-    }
-
-    public function multiplication(array $values)
-    {
-        foreach ($values as $value)
-        {
-            $this->sum *=$value;
-        }
-        
-        return $this->sum;
     }
 
    public function modulus(array $values)
@@ -127,7 +132,7 @@ class Calculator
 
         if($_POST['operation']=="multiplication")
         {
-           $result = $cal->modulus($values);
+           $result = $cal->multiplication($values);
         } 
 
         if($_POST['operation']=="modulus")
@@ -139,7 +144,7 @@ class Calculator
 
    ?>  
 
- <!-- Form med action till den fil där man har funktionen man vill köra. I detta
+ <!-- Formulär med action till den fil där man har funktionen man vill köra. I detta
  fall blir det samma fil. Metoden POST/post betyder att man skickar med values till
 funktionen. De sparas i en variabel som heter $_POST som är en array. Den kan man 
 alltid var_dump($_POST) om man vill veta vad man har skickat med i formuläret. 
@@ -153,9 +158,8 @@ name= key i arrayen. -->
                     <option value="multiplication">Gånger</option>
                     <option value="division">Delat med</option>
                     <option value="modulus">Modulus</option>
-                </select>
+    </select>
     <input type="text" name="numTwo" value="<?php echo $numTwo;?>">
-
     <button type="submit" class=""> = </button> <?php echo $result; ?> <br>
 
 </form>
