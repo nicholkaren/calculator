@@ -86,6 +86,19 @@ class Calculator
         
       //  return $this->sum;
     }
+       public function sqroot(array $values)
+    {   
+        $sum = $values[0];
+
+        return sqrt($_POST['numTwo']);
+
+       // foreach ($values as $value) 
+        //{
+         //   $this->sum %= $value;
+       // }
+        
+      //  return $this->sum;
+    }
 
 
     }
@@ -125,22 +138,26 @@ class Calculator
 
         if($_POST['operation']=="subtraction")
         {
-           $result = $cal->subtraction($values);
+            $result = $cal->subtraction($values);
         } 
 
         if($_POST['operation']=="division")
         {
-           $result = $cal->division($values);
+            $result = $cal->division($values);
         } 
 
         if($_POST['operation']=="multiplication")
         {
-           $result = $cal->multiplication($values);
+            $result = $cal->multiplication($values);
         } 
 
         if($_POST['operation']=="modulus")
         {
-           $result = $cal->modulus($values);
+            $result = $cal->modulus($values);
+        } 
+        if($_POST['operation']=="sqroot")
+        {
+            $result = $cal->sqroot($values);
         } 
 
        
@@ -162,6 +179,7 @@ name= key i arrayen. -->
                     <option value="multiplication">Gånger</option>
                     <option value="division">Delat med</option>
                     <option value="modulus">Modulus</option>
+                    <option value="sqroot">Roten ur</option>
     </select>
     <input type="text" name="numTwo" value="<?php echo $numTwo;?>">
     <button type="submit" class=""> = </button> <?php echo $result; ?> <br>
