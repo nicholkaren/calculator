@@ -1,15 +1,6 @@
 <?php
-// 6/12-2017
-// Försök lägga in $numOne och $numTwo i en array ($values) som vi använder i
-// funktionerna. Var_dump och die(); hela tiden för att se så att vi verkligen
-// får in summorna i arrayen. Slutresultat ska bli: 
-// $value = [] -> var_dump($value) -> numOne = 1, numTwo = 3.
-
-// Går det inte så skriv om funktionerna som i exemplet. 
-
-        
-// Deklarerar variabler. $_POST är en array. 
-//För att få ut siffran på t ex numOne -> $_POST['numOne']
+    // Deklarerar variabler. $_POST är en array. 
+    //För att få ut siffran på t ex numOne -> $_POST['numOne']
     if (!empty($_POST)){
     
         $numOne = $_POST['numOne'];
@@ -68,16 +59,19 @@
         }
 
         if(isset($_POST['memory'])){
-            $numOne = null;
+            $numOne = $result;
             $numTwo = null;
+            $result = null;
+        }
 
-            
-    }
+        if(isset($_POST['minusmemory'])){
+            $numOne = $numOne;
+            $numTwo = null;
+            $result = null;
+        }
 }
 
-
-
-    // Alla våra functions börjar här
+    // Functions börjar här
     class Calculator
     {
         private $sum = 0; 
@@ -85,7 +79,6 @@
     {
         return $this->sum;
     } 
-
 
     public function addition(array $values)
     {        
@@ -97,7 +90,6 @@
         return $this->sum;
     }
 
-
     public function subtraction(array $values)
     {
         // i arrayen values finns 2 tal. [0] är första talet. [1] är andra talet.
@@ -106,15 +98,12 @@
         return $sum - $values[1];
     }
 
-
     public function multiplication(array $values)
     {
-
         $sum = $values[0];
 
         return $sum * $values[1];
     }
-
 
     public function division($values) 
     {
@@ -123,14 +112,12 @@
         return $sum / $values[1];
     }
 
-
     public function modulus(array $values)
     {   
         $sum = $values[0];
 
         return $sum % $values[1];
     }
-
 
     public function sqroot(array $values)
     {   
@@ -139,11 +126,3 @@
         return sqrt($_POST['numTwo']);
     }
 }
-
-
-    // OBS!!! Ny funktion som testar enbart 2 fält ist för array!!
-    //public function simpleAddition ($numOne, $numTwo)
-   // {
-   //     return $numOne + $numTwo;
-   // }     
-
