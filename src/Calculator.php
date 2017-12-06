@@ -55,6 +55,7 @@
         {
            $result = $cal->modulus($values);
         } 
+
         if($_POST['operation']=="sqroot")
         {
             $result = $cal->sqroot($values);
@@ -64,6 +65,13 @@
             $numOne = null;
             $numTwo = null;
             $result = null;
+        }
+
+        if(isset($_POST['memory'])){
+            $numOne = null;
+            $numTwo = null;
+
+            
     }
 }
 
@@ -72,10 +80,8 @@
     // Alla våra functions börjar här
     class Calculator
     {
-
-    private $sum = 0; 
-    
-    public function getSum()
+        private $sum = 0; 
+        public function getSum()
     {
         return $this->sum;
     } 
@@ -91,6 +97,7 @@
         return $this->sum;
     }
 
+
     public function subtraction(array $values)
     {
         // i arrayen values finns 2 tal. [0] är första talet. [1] är andra talet.
@@ -98,6 +105,7 @@
 
         return $sum - $values[1];
     }
+
 
     public function multiplication(array $values)
     {
@@ -110,44 +118,25 @@
 
     public function division($values) 
     {
-        // i arrayen values så finns 2 tal. [0] är första talet. [1] är andra talet.
         $sum = $values[0];
 
         return $sum / $values[1];
-
-        //if($values == 0){
-          //  throw new \InvalidArgumentException;    
-       // }
-        //$this->sum = $this->sum / $value;
-
-        // Kolla numOne/numTwo
     }
 
-   public function modulus(array $values)
+
+    public function modulus(array $values)
     {   
         $sum = $values[0];
 
         return $sum % $values[1];
-
-       // foreach ($values as $value) 
-        //{
-         //   $this->sum %= $value;
-       // }
-        
-      //  return $this->sum;
     }
-       public function sqroot(array $values)
+
+
+    public function sqroot(array $values)
     {   
         $sum = $values[0];
 
         return sqrt($_POST['numTwo']);
-
-       // foreach ($values as $value) 
-        //{
-         //   $this->sum %= $value;
-       // }
-        
-      //  return $this->sum;
     }
 }
 
