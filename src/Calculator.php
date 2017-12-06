@@ -1,6 +1,8 @@
 <?php
     // Deklarerar variabler. $_POST är en array. 
     //För att få ut siffran på t ex numOne -> $_POST['numOne']
+   
+
     if (!empty($_POST)){
     
         $numOne = $_POST['numOne'];
@@ -15,7 +17,6 @@
         // Nyar upp en instans av klassen Calculator för att kunna kalla på funktionerna som vi har skapat i
         // klassen. 
         $cal = new Calculator();
-
 
         // Här kollar vi nu på key (name i select i form) i $_POST på vilken operation som ska köras. 
         // Dina options i selectmenyn har ett varsitt value, så vi kan kolla om det överensstämmer med
