@@ -42,14 +42,13 @@ class Calculator
         
     }
 
-
     public function multiplication(array $values)
     {
 
         $sum = $values[0];
 
         return $sum * $values[1];
-        
+
        // foreach ($values as $value)
        // {
        //     $this->sum *=$value;
@@ -75,13 +74,17 @@ class Calculator
     }
 
    public function modulus(array $values)
-    {        
-        foreach ($values as $value) 
-        {
-            $this->sum %= $value;
-        }
+    {   
+        $sum = $values[0];
+
+        return $sum % $values[1];
+
+       // foreach ($values as $value) 
+        //{
+         //   $this->sum %= $value;
+       // }
         
-        return $this->sum;
+      //  return $this->sum;
     }
 
 
