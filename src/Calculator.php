@@ -118,7 +118,6 @@
 
     }
 
-
     // OBS!!! Ny funktion som testar enbart 2 fält ist för array!!
     //public function simpleAddition ($numOne, $numTwo)
    // {
@@ -148,7 +147,9 @@ name= key i arrayen. -->
                         <option value="modulus">Modulus</option>
         </select>
         <input type="text" name="numTwo" value="<?php echo $numTwo;?>">
-        <button type="submit" style= "color: red;"> = </button> <?php echo $result; ?> <br>
+        <button type="submit" style= "color: red;"> = </button> <?php echo $result; ?> <br><br>
+        <button type="reset"> Reset </button><br><br>
+
     </form>
 </div>
 
