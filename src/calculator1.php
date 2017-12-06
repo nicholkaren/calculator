@@ -21,7 +21,7 @@ name= key i arrayen. -->
         </select>
         <input type="text" name="numTwo" value="<?php if(!empty($_POST)) {echo $numTwo;}?>">
         <button type="submit" style= "color: red;"> = </button> <?php if(!empty($_POST)){echo $result;} ?> <br><br>
-        <button type="submit" name="clear"> Clear </button> <button type="submit" name="memory"> M+</button><br><br>
+        <button type="submit" name="clear"> CE </button> <button type="submit" name="memory"> M+</button><br><br>
 
 
     </form>
