@@ -54,6 +54,10 @@
         {
            $result = $cal->modulus($values);
         } 
+        if($_POST['operation']=="sqroot")
+        {
+            $result = $cal->sqroot($values);
+        }
 
        
     // Alla våra functions börjar här
@@ -136,49 +140,15 @@
         
       //  return $this->sum;
     }
-
+}
 
 
     // OBS!!! Ny funktion som testar enbart 2 fält ist för array!!
     //public function simpleAddition ($numOne, $numTwo)
    // {
    //     return $numOne + $numTwo;
-   // }
-    
-
-
-        if($_POST['operation']=="addition")
-        {   
-            $result = $cal->addition($values);
-        } 
-
-        if($_POST['operation']=="subtraction")
-        {
-            $result = $cal->subtraction($values);
-        } 
-
-        if($_POST['operation']=="division")
-        {
-            $result = $cal->division($values);
-        } 
-
-        if($_POST['operation']=="multiplication")
-        {
-            $result = $cal->multiplication($values);
-        } 
-
-        if($_POST['operation']=="modulus")
-        {
-            $result = $cal->modulus($values);
-        } 
-        if($_POST['operation']=="sqroot")
-        {
-            $result = $cal->sqroot($values);
-        } 
-
-       
-?>     
-
+   // }     
+?>
 <!-- Formulär med action till den fil där man har funktionen man vill köra. I detta
 fall blir det samma fil. Metoden POST/post betyder att man skickar med values till
 funktionen. De sparas i en variabel som heter $_POST som är en array. Den kan man 
