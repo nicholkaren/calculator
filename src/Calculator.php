@@ -153,6 +153,7 @@ funktionen. De sparas i en variabel som heter $_POST som är en array. Den kan m
 alltid var_dump($_POST) om man vill veta vad man har skickat med i formuläret. 
 
 name= key i arrayen. -->     
+<h1 class="rubrik" style=" font-family: 'Arial';">Vår lilla kalkylator</h1>
 <form name="Calculator" action="Calculator.php" method="POST">
     <input type="text" name="numOne" value="<?php echo $numOne;?>">
     <select name="operation">
